@@ -64,13 +64,25 @@ jj = estc_actor_with_changes %>%
   filter(first_ed == 'yes') %>% 
   count(actor_id, main_category)
 
-j %>% left_join(jj, by = c('actor_id', 'main_category')) %>% 
+proper_names = readLines('data/work/proper_names.txt')
+
+df = j %>% left_join(jj, by = c('actor_id', 'main_category')) %>% 
+  mutate(across(c(n.x, n.y), .fns = ~replace_na(.,0))) %>% 
   mutate(totals = ifelse(!is.na(n.y), paste0(n.x, " (", n.y, ")"), n.x)) %>% 
   select(-n.x, -n.y) %>% 
-  pivot_wider(names_from = main_category, values_from = totals) %>% 
-  left_join(tot3, by  = 'actor_id') %>% slice_max(Total.x, n = 20) %>% 
-  left_join(estc_actors %>% 
-              select(actor_id, name_unified)) %>% 
-  select(name_unified, everything(),-actor_id, -Total.x, -Total.y) %>% write_csv('updated_totals.csv')
+  pivot_wider(names_from = main_category, values_from = totals)  %>% 
+  mutate(across(2:6, .fns = ~replace_na(.,'0')))%>% 
+  left_join(tot3, by  = 'actor_id') %>% slice_max(Total.x, n = 20) %>% mutate(Name = proper_names) %>% 
+  select(Name, everything(),-actor_id, -Total.x, -Total.y) 
+
+df%>% 
+  write_csv('data/final/updated_totals.csv')
+
+
+
+
+
+
+
 
                                                                     

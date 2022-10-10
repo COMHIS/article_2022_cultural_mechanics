@@ -1,0 +1,27 @@
+---
+title: "R Notebook"
+output:
+  pdf_document:
+    keep_tex: True
+  html_notebook: default
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+category_key = read_csv('../../../data/work/category_key.csv')
+
+category_key %>% 
+  kableExtra::kbl(booktabs = TRUE, caption = "Bespoke Genre Categorisation Taxonomy")%>%
+kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+totals = read_csv('../../../data/final/updated_totals.csv') 
+
+totals %>% 
+  kableExtra::kbl(booktabs = TRUE, caption = "Imprint counts for the ‘key Scottish works’, for the highest-ranked publishers by occurrences on imprints of these works. Number of first editions is given in parentheses. ") %>%  
+  kableExtra::kable_styling(latex_options =c("striped","scale_down"))
+```
+
