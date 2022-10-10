@@ -35,28 +35,31 @@ shs11 <- shs1 %>% group_by(publication_decade) %>%
 
 ### binding these
 
-shs22$type <- "further_editions"
+shs22$type <- "Further editions"
 
-shs11$type <- "first_editions"
+shs11$type <- "First editions"
 
 g1 <- rbind(shs11, shs22)
 
 g12<- g1 %>%
   pivot_wider(names_from = type, values_from = n, values_fill = 0)
 
-g12$further_editions = g12$further_editions - g12$first_editions
+g12$further_editions = g12$`Further editions` - g12$`First editions`
 
-g12<- g12 %>% pivot_longer(cols=c('further_editions', 'first_editions'),
+g12<- g12 %>% pivot_longer(cols=c('Further editions', 'First editions'),
                     names_to='type',
                     values_to='count') 
 
 ## plot
 
 can4 <- ggplot(g12, aes(x=publication_decade, y=count, fill=type)) + 
-  geom_bar(stat = "identity", width = 5, position = "dodge") +
+  geom_bar(stat = "identity", width = 9, position = "dodge", color ='black') +
   scale_x_continuous(breaks = seq(1700, 1800, 10))  +  
   labs(x = "Publication decade",
-       y = "n",
-       title = paste("All editions of Scottish Enlightenment keyworks")) 
+       y = "Editions", fill = 'Type:') + 
+  theme_bw() + 
+  theme(legend.position = 'bottom', text = element_text(family = 'Times', size =14)) + 
+  scale_fill_manual(values = c('black', 'white'))
 
-ggsave('output/figures/final/figure_3.jpg', plot = can4, width = 10, height = 6)
+
+ggsave('output/figures/final/figure_3.pdf', plot = can4, width = 10, height = 6)

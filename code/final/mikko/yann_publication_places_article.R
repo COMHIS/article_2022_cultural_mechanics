@@ -25,12 +25,19 @@ af <- shs2 %>% group_by(publication_decade, publication_place) %>%
 af1 <- af %>% group_by(publication_decade, place) %>%
   summarize(sum = sum(f))
 
-can8 <- ggplot(af1, aes(x = publication_decade, y = sum, fill = place))  + 
-  geom_bar(stat = "identity", colour="black", position=position_fill(), width=10) + 
-  scale_x_continuous(breaks = c(1700, 1710, 1720, 1730, 1740, 1750, 1760, 1770, 1780, 1790)) +
-  labs(x = "Publication decade",
-       y = "percentage",
-       title = paste("Comparing Edinburgh, London and other places of publication"))+ theme_minimal()
+can8 <- ggplot(af1, aes(publication_decade, sum))  + 
+  ggpattern::geom_col_pattern(aes(pattern = place, fill = place
+  ), position = 'fill', color = 'black') + 
+  theme_bw() + 
+  theme(text = element_text(family = 'Times', size =14), legend.position = 'bottom') + 
+  scale_x_continuous(breaks = seq(1700, 1800, 10)) +
+  ggpattern::scale_pattern_manual(values=c('crosshatch', 'none', 'none')) +
+  scale_fill_manual(values = c('white', 'white', 'black')) + 
+  labs(y = "Proportion", x = NULL, fill = "Place:", pattern = "Place:")+ 
+  theme(legend.key.size = unit(1.5, 'cm'))
 
 
-ggsave('output/figures/final/figure_5.jpg', plot = can8, width = 10, height = 6)
+
+
+
+ggsave('output/figures/final/figure_5.pdf', plot = can8, width = 10, height = 6)
