@@ -1,0 +1,181 @@
+Id,membership,Label,which_city
+1,0,Baldwin Robert i Fl 1746 1810,London
+2,NA,Longman Thomas,Edinburgh
+3,0,Millar Andrew,London
+4,NA,Owen William,Edinburgh
+5,1,"Keith, G.",London
+6,NA,"Boutcher, William.",Edinburgh
+7,1,"Elliot, C.",Edinburgh
+8,0,Murray John i,London
+9,3,"Robertson, J.",Edinburgh
+10,NA,"Bruce, J.",Edinburgh
+11,0,Balfour John,London
+12,0,"Baldwin, R. (Robert), 1737-1810,",London
+13,0,"Kincaid, Alexander, 1710 or 1711-1777.",Edinburgh
+14,4,Griffin William,London
+15,3,"Strahan, William",London
+16,2,Reid James,Edinburgh
+17,3,"Creech, W.",London
+18,NA,"Dickson, Adam, 1721-1776.",Edinburgh
+19,0,Evans Thomas,London
+20,1,Gray William,Edinburgh
+21,1,"MacIver, Susanna.",Edinburgh
+22,2,"Donaldson, A.",London
+23,0,Longman Thomas,Edinburgh
+24,0,Charnley William,Edinburgh
+25,0,"Perry, William, lecturer in the Academy at Edinburgh.",Edinburgh
+26,2,"BELL, A.",Edinburgh
+27,5,"HOMER, A.",Edinburgh
+28,7,"MARTIN, Archibald",Edinburgh
+29,0,Balfour John,Edinburgh
+30,0,"SANDBY, William",Edinburgh
+31,2,"DE HONDT, Peter Abraham",Edinburgh
+32,0,Edward and Charles Dilly,London
+33,0,"ETHERINGTON, Christopher",London
+34,0,"FREDERICK, William",London
+35,NA,"GRAHAM, Alexander",Edinburgh
+36,0,"NORTON, John",Edinburgh
+37,2,"RICHARDSON, J",Edinburgh
+38,NA,"RICHARDSON, Joseph",Edinburgh
+39,1,"ROBINSON, George I",Edinburgh
+40,NA,"WILSON, David",Edinburgh
+41,2,"MACFARQUHAR, Colin",Edinburgh
+42,NA,"BAXTER, D.",Edinburgh
+43,0,"WILLISON, David",Edinburgh
+44,0,"WILSON, E.",Edinburgh
+45,0,"BALFOUR, Elphingston",Edinburgh
+46,NA,"ROBERTSON, Francis",Edinburgh
+47,1,"ALSTON, Gavin",Edinburgh
+48,NA,"ELLIOT, G.",Edinburgh
+49,0,Dickson Jack,Edinburgh
+50,2,"COCHRAN, J.",Edinburgh
+51,0,Dickson James,Edinburgh
+52,2,"LIBRAIRE, J.",Edinburgh
+53,1,"BUCKLAND, J.",Edinburgh
+54,0,"DODSLEY, J.",Edinburgh
+55,NA,"KNOX, J.",Edinburgh
+56,0,"BELL, J.",Edinburgh
+57,1,"GRAY, John",Edinburgh
+58,6,John Wilson,Edinburgh
+59,0,"WOOD, John",Edinburgh
+60,0,"WILKIE, J.",Edinburgh
+61,1,"Reid, John",Edinburgh
+62,3,"Cadell, T. (Thomas),",Edinburgh
+63,5,"MILTON, P.",Edinburgh
+64,NA,"BALDWIN, R.",Edinburgh
+65,2,Fleming Robert,Edinburgh
+66,0,Jamieson Robert,Edinburgh
+67,NA,"BECKET, T.",Edinburgh
+68,NA,"SLACK, T.",Edinburgh
+69,1,"DRUMMOND, W.",London
+70,0,"GORDON, W.",Edinburgh
+71,1,"ANDERSON, W.",London
+72,NA,Johnston William,Edinburgh
+73,2,Sands William,Edinburgh
+74,NA,"SMELLIE, William",Edinburgh
+75,0,"STRACHAN, W.",Edinburgh
+76,NA,"CADDEL, J.",Edinburgh
+77,NA,"CAVELIER, P.",Edinburgh
+78,0,"VERNOR, Thomas",Edinburgh
+79,NA,"GRAY, M.",Edinburgh
+80,1,Debrett John,London
+81,1,"Symonds, H.D.,",London
+82,1,"CARY, John I",London
+83,1,Kay Thomas,Edinburgh
+84,1,"PARSONS, John",London
+85,1,"PARSONS, T",London
+86,1,"RIDGWAY, James",London
+87,1,"PICCADILLY, Debrett",London
+88,1,"Jordan, J. S.",London
+89,NA,"ANDERSON, W.",Edinburgh
+90,NA,"CHARNLEY, W.",Edinburgh
+91,NA,"Robertson, J.",Edinburgh
+92,0,"Cuthell, J.",London
+93,0,"HAWKINS, Thomas Wallis",London
+94,0,"HODSON, Edward",London
+95,NA,"MURRAY, H",London
+96,NA,"TESSEYMAN, William",Edinburgh
+97,0,"MACKIE, W.",London
+98,3,"Strahan, Andrew",London
+99,NA,"Johnston, W.",London
+100,1,"Buckland, J.",London
+101,0,"Wilkie, J.",London
+102,NA,"Johnson, J.",London
+103,0,Dilly Charles,London
+104,0,"DAVIES, John",London
+105,NA,"CROWDER, Stanley",London
+106,0,"HUGHS, John",London
+107,0,"SMITH, Thomas",London
+108,0,"DILLY, Edward",London
+109,3,"CADELL, Thomas II",London
+110,NA,"DILLYS, ---",Edinburgh
+111,0,"COWPER, M",London
+112,0,"LACKINGTON, James",London
+113,0,"NOURSE, Charles Sir",London
+114,0,"TAYLOR, N",London
+115,0,"THOMSON, William",London
+116,0,"BALFOUR, E.",Edinburgh
+117,4,"Barker, J.",London
+118,4,Carnan Thomas,London
+119,4,"GRIFFIN, T",London
+120,4,"LISTER, George",London
+121,4,"MARTIN, T",London
+122,4,"OSBORNE, W",London
+123,4,"GREEN, Bethnal",London
+124,2,Vaillant Paul,London
+125,2,"DONALDSON, John",London
+126,2,"DURHAM, Thomas",London
+127,3,"ROBERTS, George",London
+128,3,"DAVIES, William",London
+129,3,"CAVELL, William",London
+130,3,"FRENCH, T",London
+131,3,"HOWARD, ---",London
+132,3,"MARTIN, Thomas jr",London
+133,3,"TAYLOR, John",London
+134,3,"DODSLEY, R.",London
+135,3,"JUNR, T.",Edinburgh
+136,1,"Mathews, J.",London
+137,1,"Trapp, H.",London
+138,1,"GOSNELL, Samuel",London
+139,1,"PITCHER, Thomas",London
+140,2,Kearsley George,London
+141,2,"Caslon, T.",London
+142,2,"Morley, A.",London
+143,2,"HOOPER, Samuel",London
+144,2,Coote John,London
+145,5,Dodd Benjamin,London
+146,5,"REILY, T.",London
+147,7,"NEWMAN, Richard",London
+148,0,"ROWE, Rowe",London
+149,0,"MONCRIEFFE, Messrs.",London
+150,NA,"Wilson, William, M.A.",Edinburgh
+151,0,White Benjamin,London
+152,0,"Dodd, J.",London
+153,0,"BINNS, John I",London
+154,0,"WILSON, Thomas",London
+155,1,"Midwinter, D.",Edinburgh
+156,1,"Bensley, T.",London
+157,1,"FRENCH, John",London
+158,1,"COOKE, William",London
+159,1,"WINCHESTER, William",London
+160,1,Tonson Jacob,London
+161,1,"STEEL, R.",London
+162,0,"BURKS, Joseph",London
+163,0,"SMITH, James",London
+164,0,"CROMWELL, T",London
+165,0,"DURFEY, J",London
+166,0,"PHILLIPS, Richard",London
+167,0,"BIGG, George",London
+168,0,"DALE, G.",London
+169,0,"ORMSTON, H.",London
+170,0,Wenman Joseph,London
+171,0,"STRAND, Riebau",London
+172,0,"MANSON, R.",London
+173,0,"CURDEL, W.",London
+174,2,"BECKET, Thomas",London
+175,1,"HODGES, William",London
+176,1,"WREN, J",London
+177,6,"RIVINGTON, Charles",London
+178,6,"FRANCIS, James",London
+179,NA,Johnston Thomas,Edinburgh
+180,0,"JAMESON, R",London

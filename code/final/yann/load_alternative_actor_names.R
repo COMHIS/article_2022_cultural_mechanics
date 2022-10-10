@@ -1,0 +1,24 @@
+strahan = c('39467138', 'wstrahan_0')
+millar = c('15008766', 'bbti_47234', 'bbti_113662','andrewmillar_0')
+creech = c('49278054','wcreech_0')
+cadell = c('NV4519', '100920895', '18758830','thomascadell_1')
+kincaid = c('39241855', 'alexanderkincaid_1', 'bbti_40076', '39241855', 'alexanderkincaid_0')
+donaldson = c('75336707', 'adonaldson_3')
+bell = c('johnbell_1', '51741707')
+murray = c('282772606', 'jamesmurray_0', 'bbti_112341', '67305318', 'joannemmurray_0')
+c_dilly = '85698879'
+e_dilly = 'bbti_114102'
+e_c_dilly = c('bbti_20170', '155859883', 'edilly_0')
+robinson = 'bbti_58911'
+elliot = c('266844502', 'bbti_22353')
+dodsley = c('rdodsley_0', '47589')
+cooper_t = c('tcooper_0', 'bbti_15982')
+cooper_m = c('9741821', 'mcooper_9')
+hawkins = c('ghawkins_0', 'bbti_109210')
+wood_j =c('johnwood_0', 'bbti_77538')
+freebairn_r = c('robertfreebairn_0', 'robertumfreebairn_0')
+dodd = c('71283786', 'adodd_0')
+hamilton = c('wilhamilton_0', 'gavinhamilton_0')
+ramsay = c('77108557', 'allanramsay_0')
+longman = c('mrthomaslongman_0', '12361047')
+

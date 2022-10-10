@@ -1,0 +1,205 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+edge_lists_for_python = list()
+for(i in seq(1700, 1780, 20)){
+  
+ 
+   sample = all_links %>% 
+    #filter(work_id %in% scottish_core_works) %>% 
+    filter(publication_year %in% i:(i+19)) %>% 
+    left_join(corrected_names, by= c('actor_id' = 'name')) %>% 
+    mutate(actor_id = coalesce(corrected_id, actor_id)) %>% filter(actor_id != 'X')
+  
+  sample_all = all_links  %>%
+    #filter(work_id %in% scottish_core_works)%>% 
+    #filter(publication_year %in% i:(i+19)) %>% 
+    left_join(corrected_names, by= c('actor_id' = 'name')) %>% 
+    mutate(actor_id = coalesce(corrected_id, actor_id)) %>% filter(actor_id != 'X')
+  
+  for_net_sample = for_net 
+  
+  
+  all_links1 = sample %>% 
+    left_join(for_net_sample %>% select(estc_id, actor_id, combined), by = c('estc_id', 'actor_id')) %>% 
+    mutate(actor_publication_location = coalesce(combined, publication_place)) %>% 
+    select(work_id, actor_id, publication_year, publication_place, estc_id,actor_publication_location) %>% 
+    filter(publication_place %in% c('London', 'Edinburgh'))
+  
+  all_links2 = sample_all %>% 
+    left_join(for_net_sample %>% select(estc_id, actor_id, combined), by = c('estc_id', 'actor_id')) %>% 
+    mutate(actor_publication_location = coalesce(combined, publication_place)) %>% 
+    select(work_id, actor_id, publication_year, publication_place, estc_id,actor_publication_location) %>% 
+    filter(publication_place %in% c('London', 'Edinburgh'))
+  
+  full_links = all_links1 %>% left_join(all_links2, by = 'work_id')
+  
+  if(i<1720){ all = full_links %>% 
+    distinct(actor_id.x, actor_id.y, estc_id.x, estc_id.y, .keep_all = T) %>% 
+    filter(actor_id.x != actor_id.y) %>% 
+    filter(estc_id.x %in% first_edition$estc_id) %>% 
+    filter(publication_place.x == 'Edinburgh') %>% 
+    filter(publication_year.x<publication_year.y) %>% 
+    filter(publication_year.x > (publication_year.y-20)) %>% 
+    filter(estc_id.x != estc_id.y) %>% 
+     filter(actor_publication_location.x != actor_publication_location.y) %>% 
+    #left_join(final_with_predicted, by = 'work_id') %>% 
+    left_join(estc_actors %>% 
+                select(actor_id, name_unified), by = c('actor_id.x' = 'actor_id')) %>% 
+    left_join(estc_actors %>% 
+                select(actor_id, name_unified), by = c('actor_id.y' = 'actor_id'))
+  
+  } else{  all = full_links %>% 
+    distinct(actor_id.x, actor_id.y, estc_id.x, estc_id.y, .keep_all = T) %>% 
+    filter(actor_id.x != actor_id.y) %>% 
+    filter(estc_id.x %in% first_edition$estc_id) %>% 
+    filter(publication_place.x == 'Edinburgh') %>% 
+    filter(publication_year.x<publication_year.y) %>% 
+    filter(publication_year.x > (publication_year.y-20)) %>% 
+    filter(estc_id.x != estc_id.y) %>% 
+    filter(publication_place.x != publication_place.y) %>% 
+    #left_join(final_with_predicted, by = 'work_id') %>% 
+    left_join(estc_actors %>% 
+                select(actor_id, name_unified), by = c('actor_id.x' = 'actor_id')) %>% 
+    left_join(estc_actors %>% 
+                select(actor_id, name_unified), by = c('actor_id.y' = 'actor_id'))
+  
+  }
+  
+  
+edge_lists_for_python[[as.character(i)]] = all  %>%
+  count(actor_id.x, actor_id.y, name = 'weight') 
+  
+}
+
+
+```
+
+```{r}
+df_1700 = edge_lists_for_python[[1]]
+df_1720 = edge_lists_for_python[[2]]
+df_1740 = edge_lists_for_python[[3]]
+df_1760 = edge_lists_for_python[[4]]
+df_1780 = edge_lists_for_python[[5]]
+```
+
+```{r}
+library(reticulate)
+reticulate::use_condaenv('r-reticulate', required = T)
+```
+
+```{python}
+
+import leidenalg
+import igraph as ig
+import pandas as pd
+
+```
+
+1700:
+
+```{python}
+tuples = [tuple(x) for x in r.df_1700.values]
+Gm = ig.Graph.TupleList(tuples, directed = True, edge_attrs = ['weight'])
+
+named_vertex_list = Gm.vs()["name"]
+
+part = leidenalg.find_partition(Gm, leidenalg.ModularityVertexPartition, weights = 'weight')
+
+df = pd.DataFrame(list(zip(named_vertex_list, part.membership)),
+               columns =['name', 'membership'])
+
+
+```
+
+```{r}
+
+df_with_mem1700 = tibble(names = py$named_vertex_list, membership = py$part$membership)
+```
+
+
+```{python}
+tuples = [tuple(x) for x in r.df_1720.values]
+Gm = ig.Graph.TupleList(tuples, directed = True, edge_attrs = ['weight'])
+
+named_vertex_list = Gm.vs()["name"]
+
+part = leidenalg.find_partition(Gm, leidenalg.ModularityVertexPartition, weights = 'weight')
+
+df = pd.DataFrame(list(zip(named_vertex_list, part.membership)),
+               columns =['name', 'membership'])
+
+
+```
+
+```{r}
+
+df_with_mem1720 = tibble(names = py$named_vertex_list, membership = py$part$membership)
+```
+
+
+
+```{python}
+tuples = [tuple(x) for x in r.df_1740.values]
+Gm = ig.Graph.TupleList(tuples, directed = True, edge_attrs = ['weight'])
+
+named_vertex_list = Gm.vs()["name"]
+
+part = leidenalg.find_partition(Gm, leidenalg.ModularityVertexPartition, weights = 'weight')
+
+df = pd.DataFrame(list(zip(named_vertex_list, part.membership)),
+               columns =['name', 'membership'])
+
+
+```
+
+```{r}
+
+df_with_mem1740 = tibble(names = py$named_vertex_list, membership = py$part$membership)
+```
+
+
+```{python}
+tuples = [tuple(x) for x in r.df_1760.values]
+Gm = ig.Graph.TupleList(tuples, directed = True, edge_attrs = ['weight'])
+
+named_vertex_list = Gm.vs()["name"]
+
+part = leidenalg.find_partition(Gm, leidenalg.ModularityVertexPartition, weights = 'weight')
+
+df = pd.DataFrame(list(zip(named_vertex_list, part.membership)),
+               columns =['name', 'membership'])
+
+
+```
+
+```{r}
+
+df_with_mem1760 = tibble(names = py$named_vertex_list, membership = py$part$membership)
+```
+
+
+
+```{python}
+tuples = [tuple(x) for x in r.df_1780.values]
+Gm = ig.Graph.TupleList(tuples, directed = True, edge_attrs = ['weight'])
+
+named_vertex_list = Gm.vs()["name"]
+
+part = leidenalg.find_partition(Gm, leidenalg.ModularityVertexPartition, weights = 'weight')
+
+df = pd.DataFrame(list(zip(named_vertex_list, part.membership)),
+               columns =['name', 'membership'])
+
+
+```
+
+```{r}
+
+df_with_mem1780 = tibble(names = py$named_vertex_list, membership = py$part$membership)
+```
+

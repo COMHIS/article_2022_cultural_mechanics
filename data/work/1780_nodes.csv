@@ -1,0 +1,163 @@
+Id,membership,Label,which_city
+1,1,"Strahan, Andrew",London
+2,0,Longman Thomas,Edinburgh
+3,4,"Cruttwell, R.",Edinburgh
+4,3,"Elliot, C.",Edinburgh
+5,1,"Mathews, J.",London
+6,NA,"Bryce, John",London
+7,2,Murray John i,London
+8,3,"Beatson, Robert, 1742-1818.",London
+9,3,Gilbert William,London
+10,NA,"Elder, J.",London
+11,1,"Creech, W.",London
+12,4,"Kearsley, G.",Edinburgh
+13,5,"Robertson, J.",Edinburgh
+14,0,"Wood, John, Master of the Drawing Academy, Edinburgh.",London
+15,0,Elmsly Peter,London
+16,NA,"Donaldson, A.",London
+17,NA,Longman Thomas,Edinburgh
+18,1,Dilly Charles,London
+19,2,"BROWN, A.",Edinburgh
+20,0,Guthrie Alexander,Edinburgh
+21,6,"LESLIE, Alexander",Edinburgh
+22,NA,"SHIRREFS, A.",Edinburgh
+23,1,"DAVIES, William",London
+24,1,"CADELL, Thomas II",London
+25,NA,"COX, Edward",Edinburgh
+26,3,Kay Thomas,Edinburgh
+27,3,"ROBINSON, George I",Edinburgh
+28,NA,"DILLY, C.",Edinburgh
+29,NA,"NIVEN, David",Edinburgh
+30,0,"RAMSAY, David",Edinburgh
+31,NA,"LESLIE, E.",Edinburgh
+32,7,"WINGRAVE, F.",Edinburgh
+33,NA,"ALSTON, Gavin",Edinburgh
+34,2,"MILLN, G.",Edinburgh
+35,NA,"MUDIE, G.",Edinburgh
+36,NA,"MURRAY, G.",Edinburgh
+37,NA,"KEITH, G.",Edinburgh
+38,0,"MUNDELL, J.",Edinburgh
+39,0,Dickson James,Edinburgh
+40,NA,"DUNCAN, J.",Edinburgh
+41,NA,"JOHNSON, J.",Edinburgh
+42,NA,"KEY, James",Edinburgh
+43,NA,"NEILL, James",Edinburgh
+44,NA,"ANDERSON, J.",Edinburgh
+45,NA,"LONDON, J:",Edinburgh
+46,NA,"BELL, J.",Edinburgh
+47,NA,"GUTHRIE, J.",Edinburgh
+48,3,"STRAHAN, J.",Edinburgh
+49,NA,Massey,Edinburgh
+50,NA,"GRAY, M.",Edinburgh
+51,NA,"SIBBALD, J.",Edinburgh
+52,NA,"STEWART, Neil",Edinburgh
+53,4,"CHEYNE, N.",Edinburgh
+54,NA,"STEWART, N.",Edinburgh
+55,2,"Johnson, J.",London
+56,2,"Brown, T.",Edinburgh
+57,1,"Cadell, T. (Thomas),",Edinburgh
+58,0,"HILL, P.",Edinburgh
+59,NA,"BREMNER, R.",Edinburgh
+60,NA,"ROSS, R.",Edinburgh
+61,NA,"EDINBURGH, R.",Edinburgh
+62,NA,"HODGSON, S.",Edinburgh
+63,NA,"JUNR, T.",Edinburgh
+64,1,"DUNCAN, T.",Edinburgh
+65,2,"HILL, T.",Edinburgh
+66,1,Johnston Thomas,Edinburgh
+67,NA,"TURNBULL, Thomas",Edinburgh
+68,NA,"ASH, W.",Edinburgh
+69,2,"BOYD, W.",Edinburgh
+70,2,"EMBLETON, Embleton",Edinburgh
+71,NA,"GOULD, W.",Edinburgh
+72,2,"SHIELDS, W.",Edinburgh
+73,3,"GORDON, W.",Edinburgh
+74,NA,"CHARNLEY, W.",Edinburgh
+75,2,"COKE, W.",Edinburgh
+76,NA,"KNIGHT, W.",Edinburgh
+77,8,"MUDIE, W.",London
+78,NA,"SMELLIE, William",Edinburgh
+79,4,"Sael, G.",London
+80,4,"SCATCHERD, James",London
+81,4,"HURST, Thomas",London
+82,4,"CHEYNE, N.",London
+83,4,"KELLY, Thomas",London
+84,NA,"Williams, John, approximately 1730-1795.",Edinburgh
+85,NA,"Russell, John, 1710-1796.",Edinburgh
+86,NA,"Donaldson, J. (John), 1737-1801.",Edinburgh
+87,3,"Cuthell, J.",London
+88,3,"Johnson, J.",London
+89,3,"HIGHLEY, Samuel",London
+90,3,"BOAG, William I",London
+91,NA,"BALFOUR, E.",Edinburgh
+92,NA,"RUDDIMAN, Thomas",Edinburgh
+93,NA,"KAY, T.",Edinburgh
+94,NA,"GOULD, W.",Edinburgh
+95,NA,"PEATTIE, G.",Edinburgh
+96,NA,J. Fairbairn,Edinburgh
+97,NA,"OGLE, J.",London
+98,NA,"OGLE, M.",London
+99,NA,"Bruce, Archibald, 1746-1816.",Edinburgh
+100,NA,Gray William,Edinburgh
+101,2,"HAMILTON, Samuel",London
+102,2,"PAYNE, Thomas",London
+103,2,"EDWARDS, John",London
+104,2,"HAMILTON, Alexander",London
+105,2,"HAMILTON, Archibald III",London
+106,NA,"FAIRBAIRN, J.",Edinburgh
+107,1,"BUILDINGS, Argyle",London
+108,1,"JARVIS, John",London
+109,1,"JONES, Thomas",London
+110,NA,"MAWMAN, Joseph",Edinburgh
+111,0,"RUSTED, Robert",London
+112,1,"ALFESTON, F.",London
+113,NA,"MATTHEWS, J.",Edinburgh
+114,NA,"MILLER, W.",Edinburgh
+115,NA,"Ritchie, J.",Edinburgh
+116,NA,"Chapman, T.",London
+117,NA,"MURGATROYD, Joseph",Edinburgh
+118,5,"Jordan, J. S.",London
+119,0,"Cawthorn, George",London
+120,0,"Symonds, H.D.,",London
+121,0,"RICHARDSON, James Mallcott",London
+122,0,"WALLIS, John",London
+123,0,"WRIGHT, John",London
+124,NA,"CUTHELL, J.",Edinburgh
+125,NA,"HOLBORN, J.",Edinburgh
+126,NA,"LAING, W.",London
+127,NA,"HUNTER, J.",Edinburgh
+128,NA,"ALLAN, Robert",Edinburgh
+129,NA,"ANDERSON, W.",London
+130,0,Baldwin Robert i Fl 1746 1810,London
+131,0,"Richardson, W.",London
+132,0,"Lane, William",London
+133,0,"Baldwin, R. (Robert), 1737-1810,",London
+134,0,"LOWNDES, William",London
+135,1,"FAULDER, Robert",London
+136,0,"HAYES, Samuel",London
+137,0,"BECKET, Thomas",London
+138,0,Law Bedwell,London
+139,NA,"Walker, J.",Edinburgh
+140,6,"BALLARD, Thomas",London
+141,NA,"ELLIOT, C.",Edinburgh
+142,NA,"JOHNSON, J.",Edinburgh
+143,NA,"SIBBALD, J.",Edinburgh
+144,NA,"BREMNER, R.",Edinburgh
+145,NA,"ROSS, R.",Edinburgh
+146,NA,"MAYER, Salomon",Edinburgh
+147,NA,"PRESTON, T.",Edinburgh
+148,NA,"CREECH, William",Edinburgh
+149,1,Sampson Low,London
+150,1,"BOOKER, E",London
+151,3,"EATON, Daniel Isaac",London
+152,1,"WATSON, James",London
+153,NA,"OGLE, Robert",Edinburgh
+154,7,Polidori Gaetano,London
+155,0,"Owen, J.",London
+156,0,Debrett John,London
+157,0,"NICOL, George",London
+158,NA,"ARCHER, J.",London
+159,NA,"SEWELL, J.",Edinburgh
+160,NA,"ROBINSON, Messrs",Edinburgh
+161,0,"MURDOCH, John",London
+162,8,"Hatchard, J.",London
