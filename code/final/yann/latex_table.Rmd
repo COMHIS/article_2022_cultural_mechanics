@@ -1,9 +1,9 @@
 ---
 title: "R Notebook"
-output:
+output: 
   pdf_document:
-    keep_tex: True
-  html_notebook: default
+    latex_engine: xelatex
+mainfont: Times New Roman
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -12,7 +12,8 @@ category_key = read_csv('../../../data/work/category_key.csv')
 
 category_key %>% 
   kableExtra::kbl(booktabs = TRUE, caption = "Bespoke Genre Categorisation Taxonomy")%>%
-kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
+kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")%>%  
+  kableExtra::kable_styling(latex_options =c("striped"))
 ```
 
 
